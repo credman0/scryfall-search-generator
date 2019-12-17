@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class Generator {
     private SortedReductions sortedReductions = new SortedReductions();
-    private JSONHandler handler = new JSONHandler("ModernCards.json");
+    private JSONHandler handler = new JSONHandler("/ModernCards.json");
     private ArrayList<String> cardNamesList = new ArrayList<>(handler.getCardNames());
     private Random random = new Random();
     private int setSize;

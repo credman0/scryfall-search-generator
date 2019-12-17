@@ -29,11 +29,11 @@ public class JSONHandler {
 	}
 
 	protected Map<String, Card> loadCardsFromJSON(String cardsFileName) {
-		URL cardsFile = getClass().getClassLoader().getResource(cardsFileName);
+		InputStream cardsFile = getClass().getResourceAsStream(cardsFileName);
 		Map<String, Card> cards = new HashMap<String, Card>();
 		JSONObject cardJson = null;
 		try {
-			BufferedReader br = new BufferedReader(new FileReader(cardsFile.getFile()));
+			BufferedReader br = new BufferedReader(new InputStreamReader(cardsFile));
 			StringBuilder jsonBuilder = new StringBuilder();
 			String jsonString = br.readLine();
 			jsonBuilder.append(jsonString);
