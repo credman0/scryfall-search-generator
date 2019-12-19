@@ -13,8 +13,10 @@ public class Card {
 	protected Character[] identity;
 	protected String manaCost;
 	protected Map<String, Boolean> legalities;
+
+	protected int edhrank;
 	
-	public Card(String name, int cmc, String power, String toughness, String type, String text, String[] printings,
+	public Card(String name, int cmc,String power, String toughness, String type, String text, String[] printings,
 			Character[] identity, String manaCost, Map<String, Boolean> legalities) {
 		this.name = name;
 		this.cmc = cmc;
@@ -66,5 +68,9 @@ public class Card {
 
 	public String getManaCost() {
 		return manaCost;
+	}
+
+	public int getEdhrank() {
+		return edhrank;
 	}
 }

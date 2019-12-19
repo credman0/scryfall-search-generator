@@ -79,7 +79,7 @@ public class Generator {
 
     private String generateQuery() {
         Card card = getRandomCard();
-        if (random.nextBoolean()){
+        if (true){
             int length = NAME_Q_LENGTH_MIN + random.nextInt(NAME_Q_LENGTH_RANGE);
             // name
             while (card.getName().length() < length) {
